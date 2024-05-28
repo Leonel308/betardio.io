@@ -1,6 +1,6 @@
 import { GambaUi, TokenValue, useCurrentPool, useGambaPlatformContext, useUserBalance } from 'gamba-react-ui-v2'
 import React from 'react'
-import { NavLink, useHistory } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Modal } from '../components/Modal'
 import TokenSelect from './TokenSelect'
@@ -47,7 +47,7 @@ const LogoText = styled.span`
 
 
 export default function Header() {
-  const history = useHistory(); // Importamos la función useHistory de react-router-dom
+  const navigate = useNavigate(); // Importamos el hook useNavigate
   const pool = useCurrentPool()
   const context = useGambaPlatformContext()
   const balance = useUserBalance()
@@ -56,7 +56,7 @@ export default function Header() {
 
   // Función para redirigir al inicio
   const redirectToHome = () => {
-    history.push("/"); // Redirigir al inicio
+    navigate("/"); // Redirigir al inicio usando navigate
   }
 
   return (
