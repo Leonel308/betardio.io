@@ -84,12 +84,12 @@ export default function Header() {
           />
         </Modal>
       )}
-      <StyledHeader>
-        <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
-          <Logo to="/">
-            <img alt="Betardio Logo" src="/banner.png" />
-          </Logo>
-        </div>
+     <StyledHeader>
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    <BannerLink to="/">
+      <img alt="Betardio Banner" src="/banner.png" style={{ width: '200px', height: 'auto' }} />
+    </BannerLink>
+  </div>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative' }}>
           {pool.jackpotBalance > 0 && (
             <Bonus onClick={() => setJackpotHelp(true)}>
