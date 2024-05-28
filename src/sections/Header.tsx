@@ -88,6 +88,7 @@ export default function Header() {
         <div style={{ display: 'flex', gap: '200px', alignItems: 'center' }}>
           <Logo to="/">
             <img alt="Gamba logo" src="/logo.png" />
+            <LogoText>Betardio</LogoText> {/* Nuevo texto junto al logo */}
           </Logo>
         </div>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative' }}>
