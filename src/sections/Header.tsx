@@ -94,7 +94,7 @@ export default function Header() {
         </Modal>
       )}
       <StyledHeader>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '1' }}>
           <Logo to="/">
             <img alt="Gamba logo" src="/logo.png" />
             <LogoText>Betardio</LogoText> {/* Nuevo texto junto al logo */}
