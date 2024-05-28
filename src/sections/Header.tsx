@@ -1,6 +1,5 @@
-import { GambaUi, TokenValue, useCurrentPool, useGambaPlatformContext, useUserBalance } from 'gamba-react-ui-v2'
+import { TokenValue, useCurrentPool, useGambaPlatformContext, useUserBalance } from 'gamba-react-ui-v2'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Modal } from '../components/Modal'
 import TokenSelect from './TokenSelect'
@@ -38,20 +37,12 @@ const StyledHeader = styled.div`
   backdrop-filter: blur(20px);
 `
 
-const Logo = styled(NavLink)`
-  height: 35px;
-  margin: 0 10px;
-  & > img {
-    height: 100%;
-  }
-`;
-
 const LogoText = styled.span`
   color: white;
   font-size: 20px;
   font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
+  width: 70%; /* Ajusta el ancho según tu preferencia */
+  text-align: center;
 `;
 
 
@@ -94,11 +85,8 @@ export default function Header() {
         </Modal>
       )}
       <StyledHeader>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '1' }}>
-          <Logo to="/">
-            <img alt="Gamba logo" src="/logo.png" />
-            <LogoText>Betardio</LogoText> {/* Nuevo texto junto al logo */}
-          </Logo>
+        <div>
+          <LogoText>Betardio</LogoText> {/* Nuevo texto junto al logo */}
         </div>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative' }}>
           {pool.jackpotBalance > 0 && (
