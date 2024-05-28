@@ -38,26 +38,29 @@ const StyledHeader = styled.div`
   backdrop-filter: blur(20px);
 `
 
+const Logo = styled(NavLink)`
+  height: 35px;
+  margin: 0 10px;
+  & > img {
+    height: 100%;
+  }
+`;
+
 const LogoText = styled.span`
   color: white;
-  font-size: 24px; /* Ajustado el tamaño del texto */
+  font-size: 20px;
   font-weight: bold;
-  cursor: pointer; /* Agregado el cursor pointer */
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 
 export default function Header() {
-  const navigate = useNavigate(); // Importamos el hook useNavigate
   const pool = useCurrentPool()
   const context = useGambaPlatformContext()
   const balance = useUserBalance()
   const [bonusHelp, setBonusHelp] = React.useState(false)
   const [jackpotHelp, setJackpotHelp] = React.useState(false)
-
-  // Función para redirigir al inicio
-  const redirectToHome = () => {
-    navigate("/"); // Redirigir al inicio usando navigate
-  }
 
   return (
     <>
@@ -91,7 +94,12 @@ export default function Header() {
         </Modal>
       )}
       <StyledHeader>
-        <LogoText onClick={redirectToHome}>BETARDIO</LogoText> {/* Nuevo texto en el centro con onClick */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '1' }}>
+          <Logo to="/">
+            <img alt="Gamba logo" src="/logo.png" />
+            <LogoText>Betardio</LogoText> {/* Nuevo texto junto al logo */}
+          </Logo>
+        </div>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative' }}>
           {pool.jackpotBalance > 0 && (
             <Bonus onClick={() => setJackpotHelp(true)}>
@@ -109,4 +117,4 @@ export default function Header() {
       </StyledHeader>
     </>
   )
-}
+} 
