@@ -44,7 +44,15 @@ const Logo = styled(NavLink)`
   & > img {
     height: 100%;
   }
-`
+`;
+
+const LogoText = styled.span`
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 5px; /* Espacio entre el logo y el texto */
+`;
+
 
 export default function Header() {
   const pool = useCurrentPool()
