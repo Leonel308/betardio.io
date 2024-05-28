@@ -1,6 +1,6 @@
 import { GambaUi, TokenValue, useCurrentPool, useGambaPlatformContext, useUserBalance } from 'gamba-react-ui-v2'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import { Modal } from '../components/Modal'
 import TokenSelect from './TokenSelect'
@@ -38,29 +38,26 @@ const StyledHeader = styled.div`
   backdrop-filter: blur(20px);
 `
 
-const Logo = styled(NavLink)`
-  height: 35px;
-  margin: 0 10px;
-  & > img {
-    height: 100%;
-  }
-`;
-
 const LogoText = styled.span`
   color: white;
-  font-size: 20px;
+  font-size: 24px; /* Ajustado el tamaño del texto */
   font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
+  cursor: pointer; /* Agregado el cursor pointer */
 `;
 
 
 export default function Header() {
+  const history = useHistory(); // Importamos la función useHistory de react-router-dom
   const pool = useCurrentPool()
   const context = useGambaPlatformContext()
   const balance = useUserBalance()
   const [bonusHelp, setBonusHelp] = React.useState(false)
   const [jackpotHelp, setJackpotHelp] = React.useState(false)
+
+  // Función para redirigir al inicio
+  const redirectToHome = () => {
+    history.push("/"); // Redirigir al inicio
+  }
 
   return (
     <>
@@ -94,12 +91,7 @@ export default function Header() {
         </Modal>
       )}
       <StyledHeader>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '1' }}>
-          <Logo to="/">
-            <img alt="Gamba logo" src="/logo.png" />
-            <LogoText>Betardio</LogoText> {/* Nuevo texto junto al logo */}
-          </Logo>
-        </div>
+        <LogoText onClick={redirectToHome}>BETARDIO</LogoText> {/* Nuevo texto en el centro con onClick */}
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative' }}>
           {pool.jackpotBalance > 0 && (
             <Bonus onClick={() => setJackpotHelp(true)}>
