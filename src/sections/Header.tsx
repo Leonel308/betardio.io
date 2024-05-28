@@ -50,7 +50,8 @@ const LogoText = styled.span`
   color: white;
   font-size: 20px;
   font-weight: bold;
-  margin-left: 5px; /* Espacio entre el logo y el texto */
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 
@@ -92,8 +93,8 @@ export default function Header() {
           />
         </Modal>
       )}
-  <StyledHeader>
-        <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+      <StyledHeader>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <Logo to="/">
             <img alt="Gamba logo" src="/logo.png" />
             <LogoText>Betardio</LogoText> {/* Nuevo texto junto al logo */}
