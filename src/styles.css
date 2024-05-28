@@ -32,8 +32,8 @@ h1, h2 {
 }
 
 body {
-  background: var(--background-color);
-  color: var(--text-color);
+  background: white; /* Cambio del color de fondo a blanco */
+  color: white; /* Cambio del color del texto a blanco */
   cursor: default;
   margin: 0;
   overflow-y: scroll;
