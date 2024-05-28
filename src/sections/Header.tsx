@@ -39,9 +39,11 @@ const StyledHeader = styled.div`
 `
 
 const Logo = styled(NavLink)`
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+  height: 35px;
+  margin: 0 10px;
+  & > img {
+    height: 100%;
+  }
 `;
 
 const LogoText = styled.span`
