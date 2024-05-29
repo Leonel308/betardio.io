@@ -40,7 +40,7 @@ const StyledHeader = styled.div`
 
 const Logo = styled(NavLink)`
   height: 35px;
-  margin: 0 10px;
+  margin-right: 10px;
   & > img {
     height: 100%;
   }
@@ -50,10 +50,10 @@ const LogoText = styled.span`
   color: white;
   font-size: 20px;
   font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 `;
-
 
 export default function Header() {
   const pool = useCurrentPool()
@@ -94,12 +94,10 @@ export default function Header() {
         </Modal>
       )}
       <StyledHeader>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '1' }}>
-          <Logo to="/">
-            <img alt="Gamba logo" src="/logo.png" />
-            <LogoText>Betardio</LogoText> {/* Nuevo texto junto al logo */}
-          </Logo>
-        </div>
+        <Logo to="/">
+          <img alt="Gamba logo" src="/logo.png" />
+        </Logo>
+        <LogoText>Betardio</LogoText>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative' }}>
           {pool.jackpotBalance > 0 && (
             <Bonus onClick={() => setJackpotHelp(true)}>
