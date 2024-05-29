@@ -32,8 +32,8 @@ h1, h2 {
 }
 
 body {
-  background: white; /* Cambio del color de fondo a blanco */
-  color: white; /* Cambio del color del texto a blanco */
+  background: #ff4d4d; /* Cambio del color de fondo a rojito */
+  color: white; /* Mantener el color del texto en blanco */
   cursor: default;
   margin: 0;
   overflow-y: scroll;
