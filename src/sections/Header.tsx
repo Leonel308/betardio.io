@@ -94,9 +94,16 @@ export default function Header() {
   const balance = useUserBalance()
   const [bonusHelp, setBonusHelp] = React.useState(false)
   const [jackpotHelp, setJackpotHelp] = React.useState(false)
-    <header>
-      {/* Other header content */}
-      <Link to="/">
+
+
+  
+  
+
+  
+
+  return (
+  <header>
+      <Link to="/index.html">
         <LogoText>Betardio</LogoText>
       </Link>
       {/* Other header content */}
@@ -104,11 +111,9 @@ export default function Header() {
   );
 };
 
+export default Header;
 
-
-  
-
-  return (
+    
     <>
       {bonusHelp && (
         <Modal onClose={() => setBonusHelp(false)}>
