@@ -109,8 +109,8 @@ export function WelcomeBanner() {
       </div>
       <Buttons>
        
-        <button onClick={() => window.open('https://discord.gg/HSTtFFwR', '_blank')}>
-          💬 Discord
+        <button onClick={() => window.open('', '_blank')}>
+          💬 Telegram
         </button>
       </Buttons>
     </Welcome>
