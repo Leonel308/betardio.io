@@ -115,8 +115,8 @@ export function WelcomeBanner() {
         <button onClick={() => window.open('https://t.me/Dimitrescu_m', '_blank')}>
           👨‍💻 Support 24/7
         </button>
-        <button onClick={() => window.open('', '_blank')}>
-          🚀 Discord
+        <button onClick={() => window.open('https://twitter.com/BetardioSol', '_blank')}>
+          Twitter 
         </button>
       </Buttons>
     </Welcome>
