@@ -54,9 +54,36 @@ const LogoText = styled(NavLink)`
   left: 50%;
   transform: translateX(-50%);
   text-decoration: none;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade sombra al texto */
-  letter-spacing: 1.5px; /* Espacia las letras */
-  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  background: linear-gradient(-45deg, #ffb07c, #ff3e88, #2969ff, #ef3cff, #ff3c87);
+  background-size: 300% 300%;
+  animation: welcome-fade-in 0.5s ease, backgroundGradient 30s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  border-radius: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  @keyframes welcome-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes backgroundGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 `;
 
 
