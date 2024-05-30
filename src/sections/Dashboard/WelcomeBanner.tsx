@@ -102,7 +102,7 @@ export function WelcomeBanner() {
   return (
     <Welcome>
       <div>
-        <h1>Welcome to Gamba v2 👋</h1>
+        <h1>Welcome to Betardio, dear Degen 👋</h1>
         <p>
           A fair, simple and decentralized casino on Solana.
         </p>
@@ -114,7 +114,7 @@ export function WelcomeBanner() {
         <button onClick={() => window.open('https://t.me/Dimitrescu_m', '_blank')}>
           👨‍💻 Support 24/7
         </button>
-        <button onClick={() => window.open('https://discord.gg/HSTtFFwR', '_blank')}>
+        <button onClick={() => window.open('', '_blank')}>
           🚀 Discord
         </button>
       </Buttons>
