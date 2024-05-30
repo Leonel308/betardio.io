@@ -6,6 +6,21 @@ import { Modal } from '../components/Modal'
 import TokenSelect from './TokenSelect'
 import { UserButton } from './UserButton'
 
+
+const Header = () => {
+  return (
+    <header>
+      {/* Other header content */}
+      <Link to="/">
+        <LogoText>Betardio</LogoText>
+      </Link>
+      {/* Other header content */}
+    </header>
+  );
+};
+
+
+
 const Bonus = styled.button`
   all: unset;
   cursor: pointer;
