@@ -111,6 +111,8 @@ export function WelcomeBanner() {
        
         <button onClick={() => window.open('https://t.me/+6VwVuZUXw4Q4OWNh', '_blank')}>
           💬 Telegram
+          <button onClick={() => window.open('https://t.me/Dimitrescu_m', '_blank')}>
+          💬 Support
         </button>
       </Buttons>
     </Welcome>
