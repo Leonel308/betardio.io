@@ -108,14 +108,14 @@ export function WelcomeBanner() {
         </p>
       </div>
       <Buttons>
-        <button onClick={() => window.open('https://v2.gamba.so/', '_blank')}>
-          🚀 Add Liquidity
+        <button onClick={() => window.open('https://t.me/+6VwVuZUXw4Q4OWNh', '_blank')}>
+           💬Telegram
         </button>
-        <button onClick={() => window.open('https://github.com/gamba-labs/gamba', '_blank')}>
-          👨‍💻 Build your own
+        <button onClick={() => window.open('https://t.me/Dimitrescu_m', '_blank')}>
+          👨‍💻 Support 24/7
         </button>
         <button onClick={() => window.open('https://discord.gg/HSTtFFwR', '_blank')}>
-          💬 Discord
+          🚀 Discord
         </button>
       </Buttons>
     </Welcome>
