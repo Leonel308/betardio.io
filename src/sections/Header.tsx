@@ -26,7 +26,7 @@ const StyledHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 100%; 
   padding: 10px;
   background: rgba(33, 34, 51, 0.9);
   position: fixed;
@@ -46,13 +46,14 @@ const Logo = styled(NavLink)`
   }
 `;
 
-const LogoText = styled.span`
+const LogoText = styled(NavLink)`
   color: white;
   font-size: 20px;
   font-weight: bold;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  text-decoration: none; /* Asegúrate de que no tenga subrayado */
 `;
 
 export default function Header() {
@@ -95,7 +96,7 @@ export default function Header() {
       )}
       <StyledHeader>
         <Logo to="/">
-          <img alt="Gamba logo" src="/logo.png" />
+          <img alt="Betardio Logo" src="/logo.png" />
         </Logo>
         <LogoText>Betardio</LogoText>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative' }}>
