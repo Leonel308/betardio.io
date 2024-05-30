@@ -105,6 +105,7 @@ export function WelcomeBanner() {
         <h1>Welcome to Betardio, dear Degen 👋</h1>
         <p>
           A fair, simple and decentralized casino on Solana.
+          Enjoy our famous games! Also, keep playing for the jackpot!
         </p>
       </div>
       <Buttons>
