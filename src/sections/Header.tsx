@@ -94,6 +94,19 @@ export default function Header() {
   const balance = useUserBalance()
   const [bonusHelp, setBonusHelp] = React.useState(false)
   const [jackpotHelp, setJackpotHelp] = React.useState(false)
+    <header>
+      {/* Other header content */}
+      <Link to="/">
+        <LogoText>Betardio</LogoText>
+      </Link>
+      {/* Other header content */}
+    </header>
+  );
+};
+
+
+
+  
 
   return (
     <>
