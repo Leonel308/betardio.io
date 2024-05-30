@@ -136,7 +136,7 @@ export default function Header() {
         <Logo to="/">
           <img alt="Betardio Logo" src="/logo.png" />
         </Logo>
-        <LogoText>Betardio</LogoText>
+        <LogoText to="/">Betardio</LogoText>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative' }}>
           {pool.jackpotBalance > 0 && (
             <Bonus onClick={() => setJackpotHelp(true)}>
