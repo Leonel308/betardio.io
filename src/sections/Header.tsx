@@ -102,19 +102,6 @@ export default function Header() {
   
 
   return (
-
-
-    
-  <header>
-      <Link to="/index.html">
-        <LogoText>Betardio</LogoText>
-      </Link>
-      {/* Other header content */}
-    </header>
-
-export default Header;
-
-    
     <>
       {bonusHelp && (
         <Modal onClose={() => setBonusHelp(false)}>
