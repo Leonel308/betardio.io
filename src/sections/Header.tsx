@@ -53,8 +53,12 @@ const LogoText = styled(NavLink)`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  text-decoration: none; /* Asegúrate de que no tenga subrayado */
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade sombra al texto */
+  letter-spacing: 1.5px; /* Espacia las letras */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
 `;
+
 
 export default function Header() {
   const pool = useCurrentPool()
